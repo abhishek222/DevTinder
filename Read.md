@@ -20,3 +20,7 @@
 - use of regex in routes /a/, /.\*fly$/
 - Reading the query params in the routes
 - reading dynamic routes
+
+- handling multiple route handlers - play with code
+- next()
+- next function and error along with res.send()
