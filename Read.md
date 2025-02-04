@@ -1,0 +1,18 @@
+- create repo
+- Initiate the repository
+- node_modules, package.json, package-lock.json
+- install express
+- create server
+- listen to port 3000
+- write request handlers
+- install nodenom
+- what are dependencies
+- use of -g while npm install
+- difference btwn ~ and ^
+- initalize git
+- .gitignore
+- create remote repository on github
+- push all code to remote origin
+- play with routes and extensions ex. /hello, /hello/2
+- install postman app and make a worksapace and collection
+- write logic to GET, POST, PATCH, PUT
