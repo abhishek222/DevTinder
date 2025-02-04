@@ -3,19 +3,16 @@ const app = express(); //  instance of server
 
 // this will only handle GET call to /user
 app.get("/user", (req, res) => {
+  console.log(req.query); //{ userId: '23' }
   res.send({ firstName: "Abhi", lastName: "Gadhave" }); // sending response to client
 });
-app.post("/user", (req, res) => {
-  res.send("Data successfully sent to DB");
-});
-app.delete("/user", (req, res) => {
-  res.send("User deleted successfully");
+
+app.get("/user/:userId/:name/:password", (req, res) => {
+  // Dynamic routes
+  console.log(req.params); //{ userId: '777', name: 'abhi', password: 'pwd' }
+  res.send({ firstName: "Abhi", lastName: "Gadhave" }); // sending response to client
 });
 
-// this will match all the HTTP method API calls to /test
-app.use("/test", (req, res) => {
-  res.send("Hello, from server!");
-});
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });

@@ -16,3 +16,7 @@
 - play with routes and extensions ex. /hello, /hello/2
 - install postman app and make a worksapace and collection
 - write logic to GET, POST, PATCH, PUT
+- explore routing , use of ?, +, (), \* in routes
+- use of regex in routes /a/, /.\*fly$/
+- Reading the query params in the routes
+- reading dynamic routes
