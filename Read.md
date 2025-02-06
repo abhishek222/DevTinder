@@ -50,3 +50,8 @@
 - User.findOne with duplicate records - it will return older data.(cannot be sure)
 - API- Get user by email
 - API - feed API - Get/ feed - get all the users from the database.
+- create a delete user API
+- Differencec betn patch and put
+- API- update user
+- eplore the mongoose Documentation for Model Methods
+- what are options in model.findOneAnd Update
