@@ -24,3 +24,15 @@
 - handling multiple route handlers - play with code
 - next()
 - next function and error along with res.send()
+- what is middleware? why do we need it?
+- How express JS basically handles requests behind the scenes.
+- diff app.use & app.all
+- write dummy auth middleware for admin
+- write dummy auth middleware for user, except /user/login
+- error handling using app.use
+- app.use("/", (err, req, res, next) => {
+  if (err) {
+  //Log your error
+  res.status(500).send("Something Went wrong!");
+  }
+  }); // always use at last // order matters!
