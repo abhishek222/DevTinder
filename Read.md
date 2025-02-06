@@ -36,3 +36,11 @@
   res.status(500).send("Something Went wrong!");
   }
   }); // always use at last // order matters!
+
+- install mongoose library
+- connect your application to DB - "Connection-url"/devTinder
+- call connectDB fun and connect to database before starting application on 3000
+
+- create user schema and model
+- create /signup API to add data to db
+- push some document using API
