@@ -3,19 +3,45 @@ const connectDB = require("./config/databse");
 const app = express();
 const User = require("./models/user");
 
+app.use(express.json());
+
 app.post("/signup", async (req, res) => {
-  // Creating a new instance of user model
-  const user = new User({
-    firstName: "Tejashri",
-    lastName: "Gadhave",
-    emailId: "teju@gmain.com",
-    password: "teju@1234",
-  });
+  const user = new User(req.body);
   try {
     await user.save();
     res.send("user added successfully!");
   } catch (error) {
     res.status(400).send("Error saving the user");
+  }
+});
+
+// find user by emailId
+app.get("/getUser", async (req, res) => {
+  const userEmail = req.body.emailId;
+  try {
+    // const user = await User.find({ emailId: userEmail });
+    const user = await User.findOne({ emailId: userEmail });
+    if (user.length === 0) {
+      res.status(400).send("user not found");
+    } else {
+      res.send(user);
+    }
+  } catch (error) {
+    res.status(404).send("user not found");
+  }
+});
+
+// Feed API - GET /feed -get all users from database
+app.get("/feed", async (req, res) => {
+  try {
+    const user = await User.find({});
+    if (user.length === 0) {
+      res.status(400).send("user not found");
+    } else {
+      res.send(user);
+    }
+  } catch (error) {
+    res.status(404).send("user not found");
   }
 });
 

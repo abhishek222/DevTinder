@@ -44,3 +44,9 @@
 - create user schema and model
 - create /signup API to add data to db
 - push some document using API
+- jsObject vs JSON
+- add the express.json middleware to your app
+- make post call to read dynamic req body and save in db
+- User.findOne with duplicate records - it will return older data.(cannot be sure)
+- API- Get user by email
+- API - feed API - Get/ feed - get all the users from the database.
