@@ -63,3 +63,6 @@
 - create custom validate function for geder
 - Improve the db schema- PUT all appropriate validations on each field in schema
 - add timestamp to the userschema
+
+- add API level validation on Patch request & signup Post API
+- add APi validation for each field

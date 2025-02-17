@@ -42,6 +42,12 @@ const userSchema = new mongoose.Schema(
     },
     skills: {
       type: [String],
+      validate: {
+        validator: function (val) {
+          return val.length >= 2 && val.length <= 5; // Ensuring between 2 and 5 elements
+        },
+        message: "Array must have between 2 and 5 items.",
+      },
     },
   },
   { timestamps: true }
