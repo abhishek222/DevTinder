@@ -55,3 +55,11 @@
 - API- update user
 - eplore the mongoose Documentation for Model Methods
 - what are options in model.findOneAnd Update
+- update user with email ID
+
+- explore schema type options from the documentation
+- add required, unique, lowercase, min, minlenght, trim
+- add default
+- create custom validate function for geder
+- Improve the db schema- PUT all appropriate validations on each field in schema
+- add timestamp to the userschema
