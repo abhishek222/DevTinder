@@ -75,3 +75,10 @@
 - create Passwordhash using bcript.hash & save the user is encrupted password.
 - create login API
 - compare password and throw error
+
+- install cookie-parser
+- just send dummy cookie to user
+- create GET /profile API and check if you get the cookie back
+- install jsonwebtoken.
+- in login API, after email and password validation, create JWT token and send it to user in cookie
+- read the cookie inside your profile API and find logged in user.
