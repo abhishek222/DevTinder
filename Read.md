@@ -65,4 +65,11 @@
 - add timestamp to the userschema
 
 - add API level validation on Patch request & signup Post API
-- add APi validation for each field
+- Data Sanitizing - add APi validation for each field
+- Install validator
+- explore validator library functions and use validator func for password, email
+- never trust req.body
+
+- validate data in signup API
+- install bcrypt package
+- create Passwordhash using bcript.hash & save the user is encrupted password.
