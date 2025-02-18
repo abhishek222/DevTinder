@@ -73,3 +73,5 @@
 - validate data in signup API
 - install bcrypt package
 - create Passwordhash using bcript.hash & save the user is encrupted password.
+- create login API
+- compare password and throw error
