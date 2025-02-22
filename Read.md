@@ -99,3 +99,13 @@
 - Create patch /profile/edit
 - create patch /profile/updatePassword API
 - make you validate all data in every POST, PATCH API
+
+- create connection request schema
+- send connection request API
+- proper validation on connection request
+- $or query $and query in mongoose
+- schema.pre()
+- read more about indexes
+- why do we need indexes?
+- what is advaantage of indexes? and disadvantage?
+- Read this article about Compount Index
