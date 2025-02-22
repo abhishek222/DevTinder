@@ -115,3 +115,6 @@
 - thought process - POST vs GET
 - Read about ref and populate
 - create GET /user/request/received
+
+- Logic for GET /feed API
+- Explore the $nin, $ne, $or, $and query operators

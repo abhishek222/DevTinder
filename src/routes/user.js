@@ -46,4 +46,31 @@ userRouter.get("/user/connections", userAuth, async (req, res) => {
   }
 });
 
+userRouter.get("/feed", userAuth, async (req, res) => {
+  try {
+    const loggedInUser = req.user;
+    // get all the requests (send/received)
+    const requests = await ConnectionRequest.find({
+      $or: [{ fromUserId: loggedInUser._id }, { toUserId: loggedInUser._id }],
+    }).select("fromUserId toUserId status");
+
+    const hideUsersFromFeeed = new Set();
+    requests.forEach((request) => {
+      hideUsersFromFeeed.add(request.fromUserId);
+      hideUsersFromFeeed.add(request.toUserId);
+    });
+
+    const users = await User.find({
+      $and: [
+        { _id: { $nin: [...hideUsersFromFeeed] } },
+        { _id: { $ne: loggedInUser._id } },
+      ],
+    }).select(USER_POPULATE_DATA);
+
+    res.json({ message: "Data fetched successfully", data: users });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
 module.exports = userRouter;
