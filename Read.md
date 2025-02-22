@@ -109,3 +109,9 @@
 - why do we need indexes?
 - what is advaantage of indexes? and disadvantage?
 - Read this article about Compount Index
+- always think about corner cases
+
+- write code with proper validations for /request/review/:status/:userId
+- thought process - POST vs GET
+- Read about ref and populate
+- create GET /user/request/received
