@@ -1,8 +1,14 @@
 const express = require("express");
+var cors = require("cors");
 const connectDB = require("./config/databse");
 const app = express();
 const cookieParser = require("cookie-parser");
-
+app.use(
+  cors({
+    origin: "http://localhost:5173", //whitelisting domain name
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 
