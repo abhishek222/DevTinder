@@ -47,7 +47,8 @@ const userSchema = new mongoose.Schema(
     },
     photoUrl: {
       type: String,
-      default: "https://images.app.goo.gl/wss5kfZwK4PEBDEv9",
+      default:
+        "https://www.pnrao.com/wp-content/uploads/2023/06/dummy-user-male.jpg",
     },
     about: {
       type: String,

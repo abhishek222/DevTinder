@@ -15,9 +15,7 @@ userRouter.get("/user/requests/received", userAuth, async (req, res) => {
       status: "interested",
       // }).populate("fromUserId", ["firstName", "lastName"]);
     }).populate("fromUserId", USER_POPULATE_DATA);
-    const data = requests.map((row) => row.fromUserId);
-
-    res.json({ message: "Data fetched successfully", data });
+    res.json({ message: "Data fetched successfully", requests });
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
