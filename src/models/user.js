@@ -48,7 +48,7 @@ const userSchema = new mongoose.Schema(
     photoUrl: {
       type: String,
       default:
-        "https://www.pnrao.com/wp-content/uploads/2023/06/dummy-user-male.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfVuGdiPJQRi4thppytG_8zWv9UgS0MCvgiQ&s",
     },
     about: {
       type: String,
@@ -64,8 +64,17 @@ const userSchema = new mongoose.Schema(
       },
     },
   },
-  { timestamps: true }
+  { timestamps: true },
+  { strict: true }
 );
+
+userSchema.pre("save", function (next) {
+  if (!this.photoUrl) {
+    this.photoUrl =
+      "https://www.pnrao.com/wp-content/uploads/2023/06/dummy-user-male.jpg";
+  }
+  next();
+});
 
 userSchema.index({ firstName: 1, lastName: 1 });
 
