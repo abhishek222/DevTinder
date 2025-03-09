@@ -3,7 +3,7 @@ const { subDays, startOfDay, endOfDay } = require("date-fns");
 const ConnectionRequestModel = require("../models/connectionRequest");
 const sendEmail = require("./sendEmail");
 
-cron.schedule("33 12 * * *", async () => {
+cron.schedule("0 8 * * *", async () => {
   //sending mail to users who has received connnection request at morning 8am.
   console.log("running a task every minute" + new Date());
   try {

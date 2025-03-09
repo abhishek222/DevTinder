@@ -50,11 +50,11 @@ requestsRouter.post(
       const emailRes = await sendEmail.run(
         `You got new Friend Request from ${req.user.firstName}`,
         {
-          to: toUser.email,
+          to: toUser.emailId,
           subject: "New Friend Request",
           text: `${req.user.firstName} is interested in ${toUser.firstName}`,
         },
-        toUser.email
+        toUser.emailId
       );
       res.json({
         message: messages[status],
