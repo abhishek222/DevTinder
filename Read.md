@@ -129,3 +129,5 @@ Notes:
 
 - .skip() & .limit()
 - skip = (page - 1) \* limit
+
+- Scheduling cron job for sending emails

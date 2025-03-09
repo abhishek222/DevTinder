@@ -53,7 +53,8 @@ requestsRouter.post(
           to: toUser.email,
           subject: "New Friend Request",
           text: `${req.user.firstName} is interested in ${toUser.firstName}`,
-        }
+        },
+        toUser.email
       );
       res.json({
         message: messages[status],

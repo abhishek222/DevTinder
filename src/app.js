@@ -1,4 +1,5 @@
 require("dotenv").config();
+require("./utils/cronjob");
 const express = require("express");
 var cors = require("cors");
 const connectDB = require("./config/databse");
